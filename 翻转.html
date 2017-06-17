@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>翻转</title>
+	<style>
+		.wrap{
+			width:100%;
+			display:flex;
+			justify-content:center;
+			align-items:space-around;
+		}
+		.box{
+			width:400px;
+			height:400px;
+			background:#6DF8F7;
+			border-radius:50%;
+			font:60px/400px "微软雅黑";
+			text-align:center;
+			margin:30px auto;
+			transform:rotateY(0deg);
+			transition:2s;
+		}
+		.hover{
+			transform:rotateY(1080deg);
+		}
+		/*.box:hover{
+			animation:move 1s linear infinite;
+		}
+		@keyframes move{
+			0%{
+				transform:scaleX(1);
+			}
+			10%{
+				transform:scaleX(0.8);
+			}
+			20%{
+				transform:scaleX(0.6);
+			}
+			30%{
+				transform:scaleX(0.4);
+			}
+			40%{
+				transform:scaleX(0.2);
+			}
+			50%{
+				transform:scaleX(0);
+			}
+			60%{
+				transform:scaleX(0.2);
+			}
+			70%{
+				transform:scaleX(0.4);
+			}
+			80%{
+				transform:scaleX(0.6);
+			}
+			90%{
+				transform:scaleX(0.8);
+			}
+			100%{
+				transform:scaleX(1);
+			}
+		}*/
+	</style>
+	<script src="jquery-3.2.0.js"></script>
+</head>
+<body>
+	<div class="wrap">
+		<div class="box">+翻转-</div>
+		<div class="box">+翻转-</div>
+		<div class="box">+翻转-</div>
+	</div>
+	<script>
+		$('.box').hover(
+			function(){
+				$(this).addClass('hover');
+			},
+			function(){
+				$(this).removeClass('hover');
+			}
+		)
+	</script>
+</body>
+</html>
